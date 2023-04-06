@@ -75,8 +75,35 @@ model.compile(loss='mse', optimizer=optimizer, metrics=['accuracy'])
 ### Code Explanatation: </br>
 This code sets up the optimizer, loss function, and evaluation metric for the model, preparing it for training.
  - <strong> optimizer = tf.keras.optimizers.Adam(learning_rate=0.0001): </strong> This line creates an instance of the Adam optimizer with a learning rate of 0.0001. The optimizer is used during training to adjust the weights of the model in order to minimize the loss function.
- - <strong> model.compile(loss='mse', optimizer=optimizer, metrics=['accuracy']): </strong> This line <code>loss='mse'</code> specifies that we will use mean squared error as the loss function during training, which measures the difference between the predicted output and the true output. <code>optimizer=optimizer</code> specifies that we will use the Adam optimizer instance created in the previous line. <code>metrics=['accuracy']</code> specifies that we will track the accuracy metric during 
- - <strong> weights='imagenet: </strong> This parameter
+ - <strong> model.compile(loss='mse', optimizer=optimizer, metrics=['accuracy']): </strong> This line <code>loss='mse'</code> specifies that we will use mean squared error as the loss function during training, which measures the difference between the predicted output and the true output. <code>optimizer=optimizer</code> specifies that we will use the Adam optimizer instance created in the previous line. <code>metrics=['accuracy']</code> specifies that we will track the accuracy metric during training.
+ 
 
 
+## Save the best model: </br>
+```python
+save_vgg16_model = tf.keras.callbacks.ModelCheckpoint(
+    "/content/drive/MyDrive/Colab Notebooks/Number-Plate-Recognition-Model/vgg16model.h5", 
+    monitor='accuracy', 
+    save_best_only=True, 
+    verbose=1
+)
+```
+### Code Explanatation: </br>
+This code snippet creates a callback function using the tf.keras.callbacks.ModelCheckpoint class that saves the best-performing model during the training process. 
+
+ - <strong> monitor='accuracy: </strong> This tells the function to monitor the model's accuracy during training.
+ - <strong> save_best_only=True: </strong> This parameter ensures that only the best model (based on the monitored metric) will be saved. If set to False, the function will save the model after every epoch.
+ - <strong> verbose=1: </strong> This parameter sets the verbosity level of the output messages during training. A value of 1 means that progress updates will be printed to the console.
+
+## Directory Path: </br>
+```python
+training_directory = '/content/drive/MyDrive/Colab Notebooks/Number-Palte-Dataset/train'
+validation_directory = '/content/drive/MyDrive/Colab Notebooks/Number-Palte-Dataset/valid'
+```
+### Code Explanatation: </br>
+These are the directory paths for the training and validation datasets used in this project.
+
+
+ 
+ 
 </details>
