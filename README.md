@@ -89,8 +89,9 @@ save_vgg16_model = tf.keras.callbacks.ModelCheckpoint(
 )
 ```
 ### Code Explanatation: </br>
-This code snippet creates a callback function using the tf.keras.callbacks.ModelCheckpoint class that saves the best-performing model during the training process. "/content/drive/MyDrive/Colab Notebooks/Number-Plate-Recognition-Model/vgg16model.h5": This parameter specifies the path where the model weights will be saved.
+This code snippet creates a callback function using the tf.keras.callbacks.ModelCheckpoint class that saves the best-performing model during the training process.
 
+ - <code>"/content/drive/MyDrive/Colab Notebooks/Number-Plate-Recognition-Model/vgg16model.h5":</code> This parameter specifies the path where the model weights will be saved.
  - <strong> monitor='accuracy: </strong> This tells the function to monitor the model's accuracy during training.
  - <strong> save_best_only=True: </strong> This parameter ensures that only the best model (based on the monitored metric) will be saved. If set to False, the function will save the model after every epoch.
  - <strong> verbose=1: </strong> This parameter sets the verbosity level of the output messages during training. A value of 1 means that progress updates will be printed to the console.
