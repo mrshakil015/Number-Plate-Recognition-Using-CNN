@@ -1,8 +1,6 @@
 
 <details>
   <summary><b>Code Explanatation Number Plate Recognition Using CNN</b></summary>
-  <code>pyresparser</code> is a simple resume parser used for extracting information from resumes. pyresparser work with <code>spacy</code>. But now it don't work properly in <code>spacy latest version.</code> It's work better in <code>spacy==2.3.8</code> When we run pyresparser in <code>spacy</code>latest version show <code>config.cfg</code> problem. To solve this problem <code>create virtual environment.</code> 
-
   
   ## Import Libraries: </br>
   ```python
