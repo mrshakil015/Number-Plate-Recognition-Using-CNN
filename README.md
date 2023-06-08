@@ -2,6 +2,7 @@
 <details>
   <summary><b>Code Explanatation Number Plate Recognition Using CNN</b></summary>
   
+  
   ## Import Libraries: </br>
   ```python
 import os
